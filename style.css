@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f6f7fb;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* FRAME */
+.page-frame {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid #e6e8f0;
+  border-radius: 14px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+.profile-img {
+  transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+  transform: translateY(-6px);
+}
+
+.role {
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.tagline {
+  max-width: 420px;
+  margin: 14px auto 24px;
+  color: #666;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 12px 28px;
+  background: #c7c9ff;
+  border-radius: 28px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* CONTENT */
+.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 60px 24px 80px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  border-left: 4px solid #c7c9ff;
+  padding-left: 12px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #c7c9ff;
+  margin-top: 6px;
+  transition: width 0.6s ease;
+}
+
+.animate.show h2::after {
+  width: 40px;
+}
+
+
+.meta {
+  font-size: 13px;
+  color: #666;
+}
+
+/* SKILLS */
+.skills {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.skills li {
+  background: #f4f6ff;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* PROJECTS */
+.project {
+  margin-bottom: 30px;
+}
+
+/* LIST */
+.simple-list {
+  padding-left: 20px;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 420px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #c7c9ff;
+  border: none;
+  border-radius: 24px;
+}
+
+/* ANIMATION */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== BUTTON INTERACTIONS ===== */
+.btn,
+.contact-form button {
+  position: relative;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Hover effect */
+.btn:hover,
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Active / click effect */
+.btn:active,
+.contact-form button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Focus (keyboard users – important for professionalism) */
+.btn:focus-visible,
+.contact-form button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(199, 201, 255, 0.6);
+}
+.btn:hover,
+.contact-form button:hover {
+  background-color: #bfc2ff;
+}
